@@ -7,6 +7,69 @@
  */
 const UTM = '?utm_source=taniti_island&utm_medium=referral'
 
+/**
+ * APA 7 citations for design, accessibility, and mobile decisions.
+ * References used to inform UX choices on this site.
+ */
+export const designReferences = [
+  {
+    author: 'World Wide Web Consortium',
+    year: '2025',
+    title: 'Web Content Accessibility Guidelines (WCAG) 2.1',
+    description: 'W3C Recommendation. Primary standard for accessibility; informed color contrast (AA), semantic HTML, and focus management',
+    url: 'https://www.w3.org/TR/WCAG21/',
+  },
+  {
+    author: 'World Wide Web Consortium',
+    year: '2025',
+    title: 'Understanding Success Criterion 2.4.1: Bypass Blocks',
+    description: 'W3C. Rationale for skip links; keyboard users can bypass repeated navigation to reach main content',
+    url: 'https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html',
+  },
+  {
+    author: 'World Wide Web Consortium',
+    year: '2025',
+    title: 'Understanding Success Criterion 2.5.5: Target Size',
+    description: 'W3C. Minimum 44×44 CSS pixels for touch targets; applied to nav links, filter pills, and buttons on mobile',
+    url: 'https://www.w3.org/WAI/WCAG21/Understanding/target-size.html',
+  },
+  {
+    author: 'Apple Inc.',
+    year: 'n.d.',
+    title: 'Human Interface Guidelines',
+    description: 'Apple Developer. 44pt minimum touch target for iOS; reinforced our mobile touch target sizing decisions',
+    url: 'https://developer.apple.com/design/human-interface-guidelines/',
+  },
+  {
+    author: 'Mozilla Foundation',
+    year: 'n.d.',
+    title: 'Viewport meta tag',
+    description: 'MDN Web Docs. width=device-width, initial-scale=1, viewport-fit=cover for responsive layout and safe areas on notched devices',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag',
+  },
+  {
+    author: 'Mozilla Foundation',
+    year: 'n.d.',
+    title: 'prefers-reduced-motion',
+    description: 'MDN Web Docs. CSS media query to respect user preference for reduced motion; animations and transitions are minimized when enabled',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion',
+  },
+  {
+    author: 'Meta (Facebook)',
+    year: 'n.d.',
+    title: 'Accessibility',
+    description: 'React documentation. Semantic HTML, ARIA attributes in JSX, keyboard navigation, and focus management; informed our use of aria-label, aria-pressed, and accessible form patterns',
+    url: 'https://legacy.reactjs.org/docs/accessibility.html',
+  },
+  {
+    author: 'Remix Software',
+    year: 'n.d.',
+    title: 'Accessibility',
+    description: 'React Router documentation. Link and NavLink render native anchors for keyboard access; NavLink provides current-page context for assistive technology; informed our navigation structure',
+    url: 'https://reactrouter.com/how-to/accessibility',
+  },
+]
+
 /** APA 7 citations for AI tools used to generate content */
 export const contentCredits = [
   {

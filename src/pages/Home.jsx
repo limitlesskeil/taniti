@@ -5,12 +5,14 @@ import Section from "../components/Section";
 
 export default function Home() {
   return (
-    <Container>
+    <>
       <Hero
         title="Welcome to Taniti Island"
         description="Discover pristine beaches, lush rainforests, and unforgettable adventures on this tropical paradise."
         image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80"
+        className="hero--home"
       />
+      <Container>
       <Section
         title="Explore"
         className="cardGrid cardGrid--home">
@@ -34,6 +36,7 @@ export default function Home() {
           to="/events"
         />
       </Section>
-    </Container>
+      </Container>
+    </>
   );
 }

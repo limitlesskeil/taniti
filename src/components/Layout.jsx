@@ -14,8 +14,10 @@ export default function Layout() {
     mainRef.current?.focus()
   }, [pathname])
 
+  const isHome = pathname === '/'
+
   return (
-    <div className="layout">
+    <div className={`layout ${isHome ? 'layout--home' : ''}`}>
       <DocumentTitle />
       {/* Live-region announcement for screen readers when route changes */}
       <div

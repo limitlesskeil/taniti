@@ -30,16 +30,54 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-bg-header);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--color-border-soft);
-  box-shadow: var(--shadow-sm);
-  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+  padding: var(--spacing-md) env(safe-area-inset-right) var(--spacing-md) env(safe-area-inset-left);
+  padding-top: calc(var(--spacing-md) + env(safe-area-inset-top));
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  .layout__header {
+    justify-content: center;
+  }
+}
+
+/* Home: header overlays hero, stays visible on scroll */
+.layout--home .layout__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-lg);
+  padding-top: calc(var(--spacing-lg) + env(safe-area-inset-top));
+  display: flex;
+  justify-content: center;
+}
+
+.layout--home .layout__main {
+  padding-top: 0;
+  overflow-x: clip;
 }
 
 .layout__main {
   flex: 1;
   padding: var(--spacing-xl) calc(var(--spacing-md) + env(safe-area-inset-right)) calc(var(--spacing-xl) + env(safe-area-inset-bottom)) calc(var(--spacing-md) + env(safe-area-inset-left));
+  /* Prevent content from being hidden under sticky nav when scrolled into view (focus/skip link) */
+  scroll-margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  .layout__main {
+    scroll-margin-top: 5.5rem;
+  }
 }
 
 @media (min-width: 640px) {

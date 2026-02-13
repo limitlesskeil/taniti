@@ -130,4 +130,44 @@ export default [
     keywords: ["sports", "outdoor", "future"],
     comingSoon: true,
   },
+  {
+    id: 14,
+    title: "Private Beach Rental",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+    price: "$350/half-day",
+    description:
+      "Exclusive access to a secluded stretch of beach for two. Includes lounge chairs, umbrella, and a cooler with sparkling water. Perfect for honeymooners seeking privacy and romance.",
+    location: "Yellow Leaf Bay",
+    keywords: ["beach", "honeymoon", "couples", "romantic", "private"],
+  },
+  {
+    id: 15,
+    title: "Private Beach Dinner",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+    price: "$275/couple",
+    description:
+      "Private candlelit dinner on the sand at sunset. Chef-prepared three-course meal with wine pairings. Tableside service and dedicated server for an unforgettable romantic evening.",
+    location: "Yellow Leaf Bay",
+    keywords: ["beach", "honeymoon", "couples", "romantic", "dining"],
+  },
+  {
+    id: 16,
+    title: "Private Catamaran Sunset Cruise",
+    image: "https://images.unsplash.com/photo-1627877081827-406327258622?w=600&q=80",
+    price: "$425/couple",
+    description:
+      "Charter a private catamaran for a sunset cruise. Champagne and light appetizers included. Sail along the coast with stunning views—ideal for couples celebrating their honeymoon.",
+    location: "Yellow Leaf Bay",
+    keywords: ["water", "honeymoon", "couples", "romantic", "sightseeing"],
+  },
+  {
+    id: 17,
+    title: "In-Room Private Catering",
+    image: "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80",
+    price: "From $150/person",
+    description:
+      "Chef-prepared gourmet meal delivered to your room or suite. Customize your menu with local ingredients. Breakfast in bed, intimate dinner, or celebratory champagne brunch available.",
+    location: "Varies by property",
+    keywords: ["dining", "honeymoon", "couples", "romantic", "indoor"],
+  },
 ];

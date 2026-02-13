@@ -19,6 +19,29 @@
   }
 }
 
+/* Home hero – full-bleed, extended, nav overlays */
+.hero--home {
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  margin-bottom: var(--spacing-2xl);
+  min-height: 320px;
+  /* Full-bleed: break out of main padding */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+@media (min-width: 640px) {
+  .hero--home {
+    min-height: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero--home {
+    min-height: 480px;
+  }
+}
+
 .hero::before {
   content: '';
   position: absolute;

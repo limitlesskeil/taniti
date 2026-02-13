@@ -1,4 +1,4 @@
-/**
+ /**
  * Citations for images and AI-generated content.
  * Displayed in APA 7 format for academic use.
  *
@@ -295,6 +295,24 @@ export const imageCredits = [
     photographer: 'Philipp Wüthrich',
     profileUrl: `https://unsplash.com/@phiwut${UTM}`,
     context: 'Volcano Sunrise Trek',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
+    photographer: 'Sean Oulashin',
+    profileUrl: `https://unsplash.com/@oulashin${UTM}`,
+    context: 'Private Beach Rental',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0',
+    photographer: 'Daniel Neuhaus',
+    profileUrl: `https://unsplash.com/@danielneuhaus${UTM}`,
+    context: 'Private Beach Dinner',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1555244162-803834f70033',
+    photographer: 'Adi Goldstein',
+    profileUrl: `https://unsplash.com/@adigold1${UTM}`,
+    context: 'In-Room Private Catering',
   },
   {
     url: 'https://images.unsplash.com/photo-1647729008051-67102d7284f4',

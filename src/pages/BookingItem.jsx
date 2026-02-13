@@ -38,6 +38,11 @@ export default function BookingItem() {
             title={room.name}
             description={room.description}
             price={room.price}
+            guests={
+              room.maxGuests != null
+                ? `${room.maxGuests} guest${room.maxGuests === 1 ? "" : "s"}`
+                : undefined
+            }
           />
         ))}
       </Section>

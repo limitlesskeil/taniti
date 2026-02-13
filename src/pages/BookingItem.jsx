@@ -21,6 +21,11 @@ export default function BookingItem() {
 
   return (
     <Container>
+      <img
+        src={bookingItem.image}
+        alt={bookingItem.title}
+        className="room-item__image"
+      />
       <h1>{bookingItem.title}</h1>
       <p>{bookingItem.description}</p>
       <p>{bookingItem.rating}</p>
@@ -32,7 +37,6 @@ export default function BookingItem() {
             to={`/booking/${bookingItem.id}/room/${room.id}`}
             title={room.name}
             description={room.description}
-            image={bookingItem.image}
             price={room.price}
           />
         ))}

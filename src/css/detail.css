@@ -1,3 +1,38 @@
+/* Room grid – cards without images */
+.section.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.section.room-grid > h2 {
+  grid-column: 1 / -1;
+}
+
+.section.room-grid .card--link {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.section.room-grid .card--link:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.section.room-grid .cardOverlay {
+  flex: 1;
+}
+
+.section.room-grid .card__price {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 /* Room item detail */
 .room-item__property {
   color: var(--color-text-muted);

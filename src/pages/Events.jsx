@@ -30,7 +30,7 @@ export default function Events() {
       {/* List of events */}
       <Section title="Events" className="cardGrid">
         {filtered.map((item) => (
-          <Card key={item.id} title={item.title} description={item.description} image={item.image} />
+          <Card key={item.id} title={item.title} description={item.description} image={item.image} price={item.price} />
         ))}
       </Section>
     </Container>

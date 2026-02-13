@@ -9,8 +9,9 @@ export default function Home() {
       <h1>Home</h1>
       <Hero title="Welcome to Taniti Island" description="Discover the best attractions and activities on Taniti Island." image="https://via.placeholder.com/150" />
       <Section title="Welcome to Taniti Island">
-        <Card title="Explore the Island" description="Discover the best attractions and activities on Taniti Island." image="https://via.placeholder.com/150" />
-        <Card title="Explore the Island" description="Discover the best attractions and activities on Taniti Island." image="https://via.placeholder.com/150" />
+        <Card title="Book Your Stay" description="Discover the best attractions and activities on Taniti Island." image="https://via.placeholder.com/150" />
+        <Card title="Explore our Sights" description="Discover the best attractions and activities on Taniti Island." image="https://via.placeholder.com/150" />
+        <Card title="Enjoy out Events" description="Discover the best attractions and activities on Taniti Island." image="https://via.placeholder.com/150" />
       </Section>
     </Container>
   )

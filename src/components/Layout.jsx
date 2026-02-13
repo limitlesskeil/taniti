@@ -29,7 +29,14 @@ export default function Layout() {
       >
         {getPageTitle(pathname)} page loaded
       </div>
-      <a href="#main-content" className="skip-link">
+      <a
+        href="#main-content"
+        className="skip-link"
+        onClick={(e) => {
+          e.preventDefault()
+          mainRef.current?.focus()
+        }}
+      >
         Skip to main content
       </a>
       <header className="layout__header">

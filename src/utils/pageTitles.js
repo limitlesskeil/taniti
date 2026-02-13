@@ -6,7 +6,7 @@ export const TITLE_MAP = {
   "/faq": "FAQ",
   "/about": "About",
   "/contact": "Contact",
-  "/citations": "Image Credits",
+  "/citations": "Citations",
 };
 
 export function getPageTitle(pathname) {

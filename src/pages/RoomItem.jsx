@@ -13,7 +13,7 @@ export default function RoomItem() {
       <NotFoundMessage
         message="Room not found."
         backTo="/booking"
-        backLabel="Back to property"
+        backLabel="Back to properties"
       />
     );
   }

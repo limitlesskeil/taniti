@@ -11,6 +11,7 @@ import EventItem from './pages/EventItem'
 import Faq from './pages/Faq'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Citations from './pages/Citations'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/citations" element={<Citations />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

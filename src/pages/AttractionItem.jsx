@@ -1,5 +1,6 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Container from "../components/Container";
+import NotFoundMessage from "../components/NotFoundMessage";
 import attractions from "../data/attractions";
 import events from "../data/events";
 import Section from "../components/Section";
@@ -13,10 +14,11 @@ export default function AttractionItem() {
 
   if (!attractionItem) {
     return (
-      <Container>
-        <p>Attraction not found.</p>
-        <Link to="/attractions">Back to attractions</Link>
-      </Container>
+      <NotFoundMessage
+        message="Attraction not found."
+        backTo="/attractions"
+        backLabel="Back to attractions"
+      />
     );
   }
 

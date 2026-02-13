@@ -16,22 +16,39 @@ function getPriceRange(item) {
   return min === max ? `$${min}/night` : `$${min} – $${max}/night`;
 }
 
-export default function Booking() {
-  const [selectedFilter, setSelectedFilter] = useState("all");
+function getMinPrice(item) {
+  const rooms = item.rooms ?? [];
+  const prices = rooms
+    .map((r) => parseInt(r.price?.replace(/[^0-9]/g, ""), 10))
+    .filter((n) => !isNaN(n));
+  return prices.length > 0 ? Math.min(...prices) : null;
+}
 
-  const filtered = booking.filter(
-    (item) =>
-      selectedFilter === "all" ||
-      (item.category ?? "").toLowerCase() === selectedFilter.toLowerCase(),
-  );
+export default function Booking() {
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [priceMax, setPriceMax] = useState("");
+
+  const filtered = booking.filter((item) => {
+    const matchesCategory =
+      selectedFilters.length === 0 ||
+      selectedFilters.some(
+        (f) => (item.category ?? "").toLowerCase() === f.toLowerCase()
+      );
+    if (!priceMax.trim()) return matchesCategory;
+    const maxVal = parseInt(priceMax, 10);
+    if (isNaN(maxVal) || maxVal < 0) return matchesCategory;
+    const minPrice = getMinPrice(item);
+    if (minPrice === null) return matchesCategory;
+    const matchesPrice = minPrice <= maxVal;
+    return matchesCategory && matchesPrice;
+  });
 
   return (
     <Container>
       <h1>Booking</h1>
       <div className="filter-page-layout">
-        {/* Filters */}
         <ListFilters
-          filterLabel="Filter by type"
+          filterLabel="Category"
           filterOptions={[
             { label: "All", value: "all" },
             { label: "Hotel", value: "hotel" },
@@ -39,10 +56,13 @@ export default function Booking() {
             { label: "Bed and Breakfast", value: "bed and breakfast" },
             { label: "Hostel", value: "hostel" },
           ]}
-          activeFilter={selectedFilter}
-          onFilterChange={setSelectedFilter}
+          selectedValues={selectedFilters}
+          onChange={setSelectedFilters}
+          showPriceMax
+          priceMax={priceMax}
+          onPriceMaxChange={setPriceMax}
         />
-        <Section className="cardGrid">
+        <Section title="Properties" className="cardGrid">
           {filtered.map((item) => (
             <Card
               key={item.id}

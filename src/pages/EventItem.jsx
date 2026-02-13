@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import events from "../data/events";
 import attractions from "../data/attractions";
 import Container from "../components/Container";
+import NotFoundMessage from "../components/NotFoundMessage";
 
 export default function EventItem() {
   const { id } = useParams();
@@ -9,10 +10,11 @@ export default function EventItem() {
 
   if (!eventItem) {
     return (
-      <Container>
-        <p>Event not found.</p>
-        <Link to="/events">Back to events</Link>
-      </Container>
+      <NotFoundMessage
+        message="Event not found."
+        backTo="/events"
+        backLabel="Back to events"
+      />
     );
   }
 

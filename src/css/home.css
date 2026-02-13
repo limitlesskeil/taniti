@@ -4,12 +4,19 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   margin-bottom: var(--spacing-2xl);
-  min-height: 280px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-lg);
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+}
+
+@media (min-width: 640px) {
+  .hero {
+    min-height: 280px;
+    padding: var(--spacing-2xl);
+  }
 }
 
 .hero::before {
@@ -73,7 +80,7 @@
 /* Home page cards – bigger, softer, images fade into each other */
 .cardGrid--home {
   gap: var(--spacing-sm);
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
 }
 
 @media (min-width: 768px) {

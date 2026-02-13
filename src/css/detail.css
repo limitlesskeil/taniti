@@ -4,10 +4,15 @@
   margin-top: 0;
 }
 
-.room-item__image {
+/* Shared detail page image styling */
+.room-item__image,
+.attraction-item__image,
+.event-item__image {
+  display: block;
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  max-width: 720px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   border-radius: var(--radius-lg);
   margin: var(--spacing-md) 0;
   box-shadow: var(--shadow-md);
@@ -25,14 +30,6 @@
   margin-top: 0;
 }
 
-.attraction-item__image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: var(--radius-lg);
-  margin: var(--spacing-md) 0;
-  box-shadow: var(--shadow-md);
-}
 
 .attraction-item__price {
   font-size: 1.25rem;
@@ -46,14 +43,6 @@
 }
 
 /* Event item detail */
-.event-item__image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: var(--radius-lg);
-  margin: var(--spacing-md) 0;
-  box-shadow: var(--shadow-md);
-}
 
 .event-item__meta {
   color: var(--color-text-muted);
@@ -63,4 +52,82 @@
 .event-item__keywords {
   font-size: 0.9rem;
   color: var(--color-text-muted);
+}
+
+/* Collapsible related events section */
+.collapsible-section {
+  margin-bottom: var(--spacing-2xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
+
+.collapsible-section__header {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  list-style: none;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: background 0.2s;
+}
+
+.collapsible-section__header::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section__header::before {
+  content: '▶';
+  font-size: 0.75em;
+  transition: transform 0.2s;
+}
+
+.collapsible-section[open] .collapsible-section__header::before {
+  transform: rotate(90deg);
+}
+
+.collapsible-section__header:hover {
+  background: var(--color-bg-alt);
+}
+
+.collapsible-section__content {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Event grid – card layout with constrained images */
+.collapsible-section__content.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+}
+
+.collapsible-section__content.event-grid .cardImage {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.collapsible-section__content.event-grid .cardImage img,
+.collapsible-section__content.attraction-grid .cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Attraction grid – same layout as event grid */
+.collapsible-section__content.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+}
+
+.collapsible-section__content.attraction-grid .cardImage {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }

@@ -2,25 +2,31 @@ import Container from '../components/Container'
 import Section from '../components/Section'
 import Card from '../components/Card'
 import booking from '../data/booking'
+import { useState } from 'react'
+import ListFilters from '../components/Filter'
 
 export default function Booking() {
+  const [selectedFilter, setSelectedFilter] = useState('all')
+
+  const filtered = booking.filter(item => 'all' === selectedFilter || item.keywords.includes(selectedFilter));
+
   return (
     <Container>
       <h1>Booking</h1>
-      <section className="filters">
-        <h2>Filters</h2>
-        <form>
-          <input type="text" placeholder="Search" />
-          <select name="category" id="category">
-            <option value="all">All</option>
-            <option value="hotel">Hotel</option>
-            <option value="resort">Resort</option>
-            <option value="bed and breakfast">Bed and Breakfast</option>
-          </select>
-        </form>
-      </section>
+      {/* Filters */}
+      <ListFilters
+        filterLabel="Filter by type"
+        filterOptions={[
+          { label: 'All', value: 'all' },
+          { label: 'Hotel', value: 'hotel' },
+          { label: 'Resort', value: 'resort' },
+          { label: 'Bed and Breakfast', value: 'bed and breakfast' },
+        ]}
+        activeFilter={selectedFilter}
+        onFilterChange={setSelectedFilter}
+      />
       <Section title="Properties" className="cardGrid">
-        {booking.map((item) => (
+        {filtered.map((item) => (
           <Card key={item.id} title={item.title} description={item.description} image={item.image} />
         ))}
       </Section>

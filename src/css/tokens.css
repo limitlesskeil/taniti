@@ -50,8 +50,8 @@
   --font-size-h2: clamp(1.25rem, 2.5vw, 1.5rem);
   --line-height-tight: 1.25;
   --line-height-relaxed: 1.65;
-  /* Breakpoints – single source of truth for responsive layout
-     Use: @media (min-width: var(--breakpoint-sm)) { ... }
+  /* Breakpoints – reference values for responsive layout
+     Use literal px in media queries (var() not supported): 640px, 768px, 1024px
      sm: mobile → tablet, md: tablet → desktop, lg: desktop+ */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -85,4 +85,7 @@
   /* Backdrop blur – for overlay glass effect */
   --blur-sm: 8px;
   --blur-md: 12px;
+
+  /* Dropdown min-width (nav.css) */
+  --min-width-dropdown: 180px;
 }

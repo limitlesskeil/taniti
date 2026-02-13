@@ -12,7 +12,7 @@
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
 }
 
-@media (min-width: var(--breakpoint-sm)) {
+@media (min-width: 640px) {
   .hero {
     min-height: 280px;
     padding: var(--spacing-2xl);
@@ -30,13 +30,13 @@
   margin-right: calc(-50vw + 50%);
 }
 
-@media (min-width: var(--breakpoint-sm)) {
+@media (min-width: 640px) {
   .hero--home {
     min-height: 420px;
   }
 }
 
-@media (min-width: var(--breakpoint-lg)) {
+@media (min-width: 1024px) {
   .hero--home {
     min-height: 480px;
   }
@@ -106,7 +106,7 @@
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
 }
 
-@media (min-width: var(--breakpoint-md)) {
+@media (min-width: 768px) {
   .cardGrid--home {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -7,7 +7,7 @@ function Card({ title, description, image, price, guests, to, priority }) {
         <div className="cardImage">
           <img
             src={image}
-            alt={title}
+            alt={title ?? description ?? ""}
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : undefined}
           />

@@ -1,21 +1,21 @@
-import { useParams, Link } from 'react-router-dom'
-import Container from '../components/Container'
-import NotFoundMessage from '../components/NotFoundMessage'
-import booking from '../data/booking'
+import { useParams, Link } from "react-router-dom";
+import Container from "../components/Container";
+import NotFoundMessage from "../components/NotFoundMessage";
+import booking from "../data/booking";
 
 export default function RoomItem() {
-  const { id, roomId } = useParams()
-  const property = booking.find((b) => b.id === parseInt(id))
-  const room = property?.rooms?.find((r) => r.id === roomId)
+  const { id, roomId } = useParams();
+  const property = booking.find((b) => b.id === parseInt(id));
+  const room = property?.rooms?.find((r) => r.id === roomId);
 
   if (!property || !room) {
     return (
       <NotFoundMessage
         message="Room not found."
         backTo="/booking"
-        backLabel="Back to properties"
+        backLabel="Back to property"
       />
-    )
+    );
   }
 
   return (
@@ -30,5 +30,5 @@ export default function RoomItem() {
       <p>Up to {room.maxGuests} guests</p>
       <p>{room.description}</p>
     </Container>
-  )
+  );
 }

@@ -28,7 +28,7 @@ export default function BookingItem() {
       />
       <h1>{bookingItem.title}</h1>
       <p>{bookingItem.description}</p>
-      <p>{bookingItem.rating}</p>
+      <p>{bookingItem.rating} out of 5 stars</p>
       <p>{bookingItem.amenities.join(", ")}</p>
       <Section title="Rooms" className="room-grid">
         {bookingItem.rooms.map((room) => (

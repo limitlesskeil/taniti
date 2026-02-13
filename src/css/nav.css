@@ -173,8 +173,8 @@
   font-weight: 600;
 }
 
-/* Desktop: centered pill nav with hover dropdowns */
-@media (min-width: var(--breakpoint-md)) {
+/* Desktop: centered pill nav with hover dropdowns (768px – var() not supported in media queries) */
+@media (min-width: 768px) {
   .main-nav {
     padding: var(--spacing-md) var(--spacing-xl);
     justify-content: center;
@@ -236,7 +236,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 180px;
+    min-width: var(--min-width-dropdown);
     padding: var(--spacing-sm);
     background: var(--color-bg-elevated);
     border: 1px solid var(--color-border);

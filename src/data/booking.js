@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: 'Beachfront Villa',
-    image: 'https://via.placeholder.com/600x400/0a6e6e/fff?text=Beachfront+Villa',
+    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80',
     category: 'Bed and Breakfast',
     description: 'A luxurious beachfront villa with a private beach and ocean views.',
     amenities: ['Private beach', 'Ocean views', 'Free Wi-Fi'],
@@ -41,7 +41,7 @@ export default [
   {
     id: 2,
     title: 'Beachfront Condo',
-    image: 'https://via.placeholder.com/600x400/085a5a/fff?text=Beachfront+Condo',
+    image: 'https://images.unsplash.com/photo-1566073774923-9e313079af30?w=600&q=80',
     category: 'Hotel',
     description: 'A modern beachfront condo with stunning sunsets and resort amenities.',
     amenities: ['Private beach', 'Ocean views', 'Free Wi-Fi', 'Kitchenette'],
@@ -73,7 +73,7 @@ export default [
   {
     id: 3,
     title: 'Beachfront House',
-    image: 'https://via.placeholder.com/600x400/0a6e6e/fff?text=Beachfront+House',
+    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80',
     category: 'Bed and Breakfast',
     description: 'A secluded beachfront house perfect for families and groups.',
     amenities: ['Private beach', 'Ocean views', 'Free Wi-Fi', 'Full kitchen'],
@@ -112,7 +112,7 @@ export default [
   {
     id: 4,
     title: 'The Azure Kaimana Resort & Spa',
-    image: 'https://via.placeholder.com/600x400/0a6e6e/fff?text=Azure+Kaimana',
+    image: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80',
     category: 'Resort',
     description: 'A full-service resort with spa, pool, and private beach.',
     amenities: ['Private beach', 'Spa', 'Pool', 'Restaurant', 'Free Wi-Fi'],
@@ -165,7 +165,7 @@ export default [
   {
     id: 5,
     title: 'Taniti Island Hostel',
-    image: 'https://via.placeholder.com/600x400/085a5a/fff?text=Island+Hostel',
+    image: 'https://images.unsplash.com/photo-1520277739336-7bf67edfa768?w=600&q=80',
     category: 'Hostel',
     description:
       'Budget-friendly dorm and private rooms. Shared kitchen and common area. Government-inspected.',
@@ -191,7 +191,7 @@ export default [
   {
     id: 6,
     title: 'Seaside Bed & Breakfast',
-    image: 'https://via.placeholder.com/600x400/0a6e6e/fff?text=Seaside+B%26B',
+    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80',
     category: 'Bed and Breakfast',
     description: 'Family-run B&B with homestyle breakfast. Ocean views from the patio.',
     amenities: ['Breakfast included', 'Ocean views', 'Free Wi-Fi'],
@@ -216,7 +216,7 @@ export default [
   {
     id: 7,
     title: 'Coconut Grove Hotel',
-    image: 'https://via.placeholder.com/600x400/085a5a/fff?text=Coconut+Grove',
+    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80',
     category: 'Hotel',
     description: 'Family-owned hotel near the beach. Friendly service and island hospitality.',
     amenities: ['Pool', 'Free Wi-Fi', 'Restaurant'],

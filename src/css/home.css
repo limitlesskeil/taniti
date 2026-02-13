@@ -69,3 +69,59 @@
 .section.cardGrid > h2 {
   grid-column: 1 / -1;
 }
+
+/* Home page cards – bigger, softer, images fade into each other */
+.cardGrid--home {
+  gap: var(--spacing-sm);
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .cardGrid--home {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cardGrid--home .card {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-soft);
+}
+
+.cardGrid--home .card--link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardGrid--home .cardImage {
+  position: relative;
+  aspect-ratio: 5 / 4;
+}
+
+.cardGrid--home .cardImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5) 0%,
+    transparent 12%,
+    transparent 88%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+.cardGrid--home .cardOverlay {
+  padding: var(--spacing-xl);
+  background: linear-gradient(to top, var(--color-bg-elevated) 0%, rgba(254, 253, 251, 0.98) 100%);
+}
+
+.cardGrid--home .cardOverlay h3 {
+  font-size: 1.25rem;
+}
+
+.cardGrid--home .cardOverlay p {
+  font-size: 1rem;
+  -webkit-line-clamp: 3;
+}

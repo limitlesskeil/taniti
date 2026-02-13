@@ -1,7 +1,7 @@
 /* Footer */
 .footer {
   padding: var(--spacing-2xl) var(--spacing-lg);
-  background: linear-gradient(180deg, var(--color-bg-alt) 0%, #e2e8f0 100%);
+  background: var(--color-bg-footer);
   border-top: 1px solid var(--color-border);
   margin-top: auto;
 }

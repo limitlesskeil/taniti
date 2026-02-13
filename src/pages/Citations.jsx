@@ -1,39 +1,93 @@
 import Container from '../components/Container'
-import { imageCredits } from '../data/citations'
+import { imageCredits, contentCredits } from '../data/citations'
+
+/**
+ * Format photographer name for APA 7: "Last Name, F. I."
+ * Single names or names with "•" are used as-is.
+ * Handles particles like "von", "van", "de" in surnames.
+ */
+function formatApaAuthor(name) {
+  if (!name || name.includes('•')) return name
+  const parts = name.trim().split(/\s+/)
+  if (parts.length === 1) return name
+  const particles = ['von', 'van', 'de', 'la']
+  let lastName, firstParts
+  if (
+    parts.length > 2 &&
+    particles.includes(parts[parts.length - 2].toLowerCase())
+  ) {
+    lastName = parts.slice(-2).join(' ')
+    firstParts = parts.slice(0, -2)
+  } else {
+    lastName = parts[parts.length - 1]
+    firstParts = parts.slice(0, -1)
+  }
+  const initials = firstParts.map((p) => p[0]).join('. ')
+  return `${lastName}, ${initials}.`
+}
 
 export default function Citations() {
   return (
     <Container>
-      <h1>Image Credits</h1>
+      <h1>Citations</h1>
       <p className="citations-intro">
-        Photos on this site are from Unsplash. We thank the photographers for
-        sharing their work. Attribution follows Unsplash guidelines.
+        This page cites all sources used on the site in APA 7 format.
       </p>
-      <ul className="citations-list">
-        {imageCredits.map((credit, i) => (
-          <li key={i} className="citations-item">
-            <span className="citations-context">{credit.context}</span>
-            <span className="citations-attribution">
-              Photo by{' '}
-              <a
-                href={credit.profileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {credit.photographer}
-              </a>{' '}
-              on{' '}
-              <a
-                href={`https://unsplash.com/?utm_source=taniti_island&utm_medium=referral`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Unsplash
-              </a>
-            </span>
-          </li>
-        ))}
-      </ul>
+
+      <section className="citations-section">
+        <h2>Images</h2>
+        <p className="citations-section-intro">
+          Images are from Unsplash. Format: Author. (n.d.). <em>Title</em>{' '}
+          [Photograph]. Unsplash. URL
+        </p>
+        <ol className="citations-list">
+          {imageCredits.map((credit, i) => {
+            const author = formatApaAuthor(credit.photographer)
+            const title = credit.context
+            return (
+              <li key={i} className="citations-item">
+                <span className="citations-apa">
+                  {author} (n.d.). <em>{title}</em> [Photograph]. Unsplash.{' '}
+                  <a
+                    href={credit.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="citations-url"
+                  >
+                    {credit.url}
+                  </a>
+                </span>
+              </li>
+            )
+          })}
+        </ol>
+      </section>
+
+      <section className="citations-section">
+        <h2>AI-Generated Content</h2>
+        <p className="citations-section-intro">
+          Some content was generated with AI assistance. Format: Author. (Year).{' '}
+          <em>Title</em> [Description]. URL
+        </p>
+        <ol className="citations-list">
+          {contentCredits.map((credit, i) => (
+            <li key={i} className="citations-item">
+              <span className="citations-apa">
+                {credit.author}. ({credit.year}). <em>{credit.title}</em> [
+                {credit.description}].{' '}
+                <a
+                  href={credit.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="citations-url"
+                >
+                  {credit.url}
+                </a>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </section>
     </Container>
   )
 }

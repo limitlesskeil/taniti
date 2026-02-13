@@ -1,12 +1,23 @@
 /**
- * Image credits for Unsplash photos.
- * Format: Photo by [Name] on Unsplash (per Unsplash guidelines)
- * UTM params: utm_source=taniti_island&utm_medium=referral
+ * Citations for images and AI-generated content.
+ * Displayed in APA 7 format for academic use.
  *
- * IMPORTANT: Update this file whenever you add, change, or remove images
+ * IMPORTANT: Update imageCredits whenever you add, change, or remove images
  * in booking.js, attractions.js, events.js, or Home.jsx.
  */
 const UTM = '?utm_source=taniti_island&utm_medium=referral'
+
+/** APA 7 citations for AI tools used to generate content */
+export const contentCredits = [
+  {
+    author: 'Anysphere',
+    year: '2024',
+    title: 'Cursor',
+    description: 'AI-assisted code editor',
+    url: 'https://cursor.com',
+    context: 'Generated content for booking, attractions, and events data',
+  },
+]
 
 export const imageCredits = [
   {
@@ -16,21 +27,21 @@ export const imageCredits = [
     context: 'Home hero, Yellow Leaf Bay Beaches',
   },
   {
-    url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d',
-    photographer: 'Joe Cook',
-    profileUrl: `https://unsplash.com/@joecook${UTM}`,
+    url: 'https://images.unsplash.com/photo-1768837005215-bdc046b1737d',
+    photographer: 'Intricate Explorer',
+    profileUrl: `https://unsplash.com/@intricateexplorer${UTM}`,
     context: 'Beachfront Villa',
   },
   {
-    url: 'https://images.unsplash.com/photo-1566073774923-9e313079af30',
-    photographer: 'Leonard von Bibra',
-    profileUrl: `https://unsplash.com/@leonardvonbibra${UTM}`,
+    url: 'https://images.unsplash.com/photo-1491378630646-3440efa57c3b',
+    photographer: 'Jack Hamilton',
+    profileUrl: `https://unsplash.com/@jacc${UTM}`,
     context: 'Beachfront Condo',
   },
   {
-    url: 'https://images.unsplash.com/photo-1582719508461-905c673771fd',
-    photographer: 'Luca Bravo',
-    profileUrl: `https://unsplash.com/@lucabravo${UTM}`,
+    url: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2',
+    photographer: 'Brett Jordan',
+    profileUrl: `https://unsplash.com/@brett_jordan${UTM}`,
     context: 'Beachfront House',
   },
   {
@@ -46,10 +57,16 @@ export const imageCredits = [
     context: 'Island Hostel',
   },
   {
+    url: 'https://images.unsplash.com/photo-1613618948931-efbc3e6f9775',
+    photographer: 'Emrah Kara',
+    profileUrl: `https://unsplash.com/@emrahkara${UTM}`,
+    context: 'Seaside B&B',
+  },
+  {
     url: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4',
     photographer: 'Florian Wehde',
     profileUrl: `https://unsplash.com/@florianwehde${UTM}`,
-    context: 'Seaside B&B, Coconut Grove Hotel',
+    context: 'Coconut Grove Hotel',
   },
   {
     url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3f',

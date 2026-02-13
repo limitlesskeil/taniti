@@ -5,6 +5,27 @@
   max-width: 50ch;
 }
 
+.citations-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.citations-section:last-child {
+  margin-bottom: 0;
+}
+
+.citations-section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--color-text);
+}
+
+.citations-section-intro {
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  max-width: 60ch;
+}
+
 .citations-list {
   list-style: none;
   padding: 0;
@@ -12,32 +33,31 @@
 }
 
 .citations-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm) var(--spacing-md);
   padding: var(--spacing-md) 0;
   border-bottom: 1px solid var(--color-border);
+  text-indent: -2em;
+  padding-left: 2em;
 }
 
 .citations-item:last-child {
   border-bottom: none;
 }
 
-.citations-context {
-  font-weight: 500;
+.citations-apa {
   color: var(--color-text);
-  min-width: 12ch;
-}
-
-.citations-attribution {
-  color: var(--color-text-muted);
   font-size: 0.9375rem;
+  line-height: 1.6;
 }
 
-.citations-attribution a {
+.citations-apa em {
+  font-style: italic;
+}
+
+.citations-url {
   color: var(--color-primary);
+  word-break: break-all;
 }
 
-.citations-attribution a:hover {
+.citations-url:hover {
   text-decoration: underline;
 }

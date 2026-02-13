@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: 'Beachfront Villa',
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1768837005215-bdc046b1737d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Bed and Breakfast',
     description: 'A luxurious beachfront villa with a private beach and ocean views.',
     amenities: ['Private beach', 'Ocean views', 'Free Wi-Fi'],
@@ -41,7 +41,7 @@ export default [
   {
     id: 2,
     title: 'Beachfront Condo',
-    image: 'https://images.unsplash.com/photo-1566073774923-9e313079af30?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1491378630646-3440efa57c3b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Hotel',
     description: 'A modern beachfront condo with stunning sunsets and resort amenities.',
     amenities: ['Private beach', 'Ocean views', 'Free Wi-Fi', 'Kitchenette'],
@@ -73,7 +73,7 @@ export default [
   {
     id: 3,
     title: 'Beachfront House',
-    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Bed and Breakfast',
     description: 'A secluded beachfront house perfect for families and groups.',
     amenities: ['Private beach', 'Ocean views', 'Free Wi-Fi', 'Full kitchen'],
@@ -191,7 +191,7 @@ export default [
   {
     id: 6,
     title: 'Seaside Bed & Breakfast',
-    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1613618948931-efbc3e6f9775?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Bed and Breakfast',
     description: 'Family-run B&B with homestyle breakfast. Ocean views from the patio.',
     amenities: ['Breakfast included', 'Ocean views', 'Free Wi-Fi'],

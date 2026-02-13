@@ -11,7 +11,7 @@ export default function Footer() {
         <Link to="/about">About</Link>
         <Link to="/faq">FAQ</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/citations">Image Credits</Link>
+        <Link to="/citations">Citations</Link>
       </div>
       <p className="footer__copy">&copy; {new Date().getFullYear()} Taniti Island</p>
     </footer>

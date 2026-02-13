@@ -9,8 +9,8 @@ export default function Home() {
       <h1>Home</h1>
       <Hero
         title="Welcome to Taniti Island"
-        description="Discover the best attractions and activities on Taniti Island."
-        image="https://via.placeholder.com/150"
+        description="Discover pristine beaches, lush rainforests, and unforgettable adventures on this tropical paradise."
+        image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80"
       />
       <Section title="Welcome to Taniti Island">
         <Card

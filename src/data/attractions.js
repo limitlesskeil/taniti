@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: "Yellow Leaf Bay Beaches",
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1584894727710-fa0f649db8f2?w=600&q=80",
     price: "Free",
     description:
       "White, sandy beaches that encircle Yellow Leaf Bay. Swimming, sunbathing, and beachcombing.",
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     title: "Taniti Volcano National Park",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3f?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1710788206590-a8bbd6007e12?w=600&q=80",
     price: "$25/person",
     description:
       "Visit Taniti's active volcano. Guided hikes through volcanic terrain with stunning views.",
@@ -22,7 +22,7 @@ export default [
   {
     id: 3,
     title: "Rainforest Canopy Zip-Line",
-    image: "https://images.unsplash.com/photo-1522163186982-2f1f81a3a82b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1651183993471-ea2391960f6f?w=600&q=80",
     price: "$89/person",
     description:
       "Zip through the rainforest canopy on an exhilarating guided tour.",
@@ -32,7 +32,7 @@ export default [
   {
     id: 4,
     title: "Island Charter Fishing",
-    image: "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1625183656263-171183307b15?w=600&q=80",
     price: "$150/half-day",
     description:
       "Chartered fishing tours into the waters around Taniti. Equipment and guide included.",
@@ -42,7 +42,7 @@ export default [
   {
     id: 5,
     title: "Snorkeling at Merriton Landing",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1658298208155-ab71765747a1?w=600&q=80",
     price: "$45/person",
     description:
       "Snorkel the crystal-clear waters near Merriton Landing. Gear and instruction provided.",
@@ -52,7 +52,7 @@ export default [
   {
     id: 6,
     title: "Taniti History Museum",
-    image: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1696694139314-e0e5962b8dc0?w=600&q=80",
     price: "$12/person",
     description:
       "Explore Taniti's local history and culture at this museum in Taniti City.",
@@ -62,7 +62,7 @@ export default [
   {
     id: 7,
     title: "Island Boat Tour",
-    image: "https://images.unsplash.com/photo-1473499909907-949f5b086d7f?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1498623116890-37e912163d5d?w=600&q=80",
     price: "$65/person",
     description:
       "Boat tour around the island with views of the coast, bay, and volcanic landscape.",
@@ -82,7 +82,7 @@ export default [
   {
     id: 9,
     title: "Rainforest Hiking Trail",
-    image: "https://images.unsplash.com/photo-1511497584785-1e61b3b2a6a?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1747241118290-9ed0ecfffc05?w=600&q=80",
     price: "$35/person",
     description:
       "Guided hike through the rainforest. Discover native flora and fauna.",
@@ -92,7 +92,7 @@ export default [
   {
     id: 10,
     title: "Helicopter Island Tour",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1683700242646-f74beb906386?w=600&q=80",
     price: "$199/person",
     description:
       "Aerial tour of Taniti. See the volcano, bay, and coastline from above.",

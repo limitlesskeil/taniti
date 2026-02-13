@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: 'Taniti Festival of Lights',
-    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80',
+    image: 'https://images.pexels.com/photos/27894343/pexels-photo-27894343.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'March 15–17',
     location: 'Taniti City',
     description:
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     title: 'Yellow Leaf Bay Regatta',
-    image: 'https://images.unsplash.com/photo-1473499909907-949f5b086d7f?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1498623116890-37e912163d5d?w=600&q=80',
     date: 'July 8',
     location: 'Yellow Leaf Bay',
     description:
@@ -23,7 +23,7 @@ export default [
   {
     id: 3,
     title: 'Volcano Moon Festival',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3f?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1576790535255-09ae1ca64ed1?w=600&q=80',
     date: 'August 22',
     location: 'Volcano National Park',
     description:
@@ -34,7 +34,7 @@ export default [
   {
     id: 4,
     title: 'Merriton Landing Street Fair',
-    image: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1556360853-b581cf3c8eb2?w=600&q=80',
     date: 'Every Saturday',
     location: 'Merriton Landing',
     description:
@@ -45,7 +45,7 @@ export default [
   {
     id: 5,
     title: 'Rainforest Birding Festival',
-    image: 'https://images.unsplash.com/photo-1511497584785-1e61b3b2a6a?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1560951750-1e85780f946b?w=600&q=80',
     date: 'September 12–14',
     location: 'Rainforest Trails',
     description:
@@ -67,7 +67,7 @@ export default [
   {
     id: 7,
     title: 'Coconut Harvest Festival',
-    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1620752420341-4cd7642568dd?w=600&q=80',
     date: 'October 1',
     location: 'Yellow Leaf Bay',
     description:
@@ -78,7 +78,7 @@ export default [
   {
     id: 8,
     title: 'Cruise Ship Welcome Night',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=600&q=80',
     date: 'Weekly (cruise arrival day)',
     location: 'Yellow Leaf Bay Port',
     description:
@@ -89,7 +89,7 @@ export default [
   {
     id: 9,
     title: 'Sunset Sail Social',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1627877081827-406327258622?w=600&q=80',
     date: 'Every Friday',
     location: 'Yellow Leaf Bay Marina',
     description:
@@ -100,7 +100,7 @@ export default [
   {
     id: 10,
     title: 'Beach Bonfire & Stargazing',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1663247168201-1d6ea2d448fc?w=600&q=80',
     date: 'Every Wednesday',
     location: 'Yellow Leaf Bay Beaches',
     description:
@@ -111,7 +111,7 @@ export default [
   {
     id: 11,
     title: 'Taniti Island Volleyball Championship',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1634501087922-c01c76ed66d6?w=600&q=80',
     date: 'June 21',
     location: 'Yellow Leaf Bay Beaches',
     description:
@@ -122,7 +122,7 @@ export default [
   {
     id: 12,
     title: 'Snorkeling Under the Stars',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80',
+    image: 'https://images.pexels.com/photos/2404370/pexels-photo-2404370.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'Full moon nights (monthly)',
     location: 'Merriton Landing',
     description:
@@ -133,7 +133,7 @@ export default [
   {
     id: 13,
     title: 'Snorkel & Discover Day',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80',
+    image: 'https://images.pexels.com/photos/2744596/pexels-photo-2744596.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'August 15',
     location: 'Merriton Landing',
     description:
@@ -144,7 +144,7 @@ export default [
   {
     id: 14,
     title: 'Volcano Sunrise Trek',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1693643449954-dadf36202f86?w=600&q=80',
     date: 'First Sunday of each month',
     location: 'Volcano National Park',
     description:
@@ -155,7 +155,7 @@ export default [
   {
     id: 15,
     title: 'Zip-Line Challenge Weekend',
-    image: 'https://images.unsplash.com/photo-1522163186982-2f1f81a3a82b?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1575780684471-ed79a358de9a?w=600&q=80',
     date: 'July 20–21',
     location: 'Rainforest Canopy Zip-Line',
     description:
@@ -166,7 +166,7 @@ export default [
   {
     id: 16,
     title: 'Taniti Fishing Derby',
-    image: 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1656155175006-e2ee62a270c4?w=600&q=80',
     date: 'September 7',
     location: 'Yellow Leaf Bay Marina',
     description:

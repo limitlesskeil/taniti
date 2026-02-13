@@ -9,24 +9,36 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-warm) 100%);
   min-height: 100vh;
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 a:hover {
+  color: var(--color-primary-hover);
   text-decoration: underline;
 }
 
 /* Page headings */
 h1 {
   font-size: var(--font-size-h1);
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: var(--line-height-tight);
   margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--color-text);
 }

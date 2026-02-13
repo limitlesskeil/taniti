@@ -3,6 +3,7 @@ import Section from "../components/Section";
 import Card from "../components/Card";
 import attractions from "../data/attractions";
 import { useState } from "react";
+import FilterSection from "../components/FilterSection";
 import ListFilters from "../components/Filter";
 
 function parsePrice(priceStr) {
@@ -34,27 +35,29 @@ export default function Attractions() {
     <Container>
       <h1>Attractions</h1>
       <div className="filter-page-layout">
-        <ListFilters
-          filterLabel="Type"
-          filterOptions={[
-            { label: "All", value: "all" },
-            { label: "Beach", value: "beach" },
-            { label: "Hiking", value: "hiking" },
-            { label: "Culture", value: "culture" },
-            { label: "Water", value: "water" },
-            { label: "Nature", value: "nature" },
-          ]}
-          selectedValues={selectedFilters}
-          onChange={setSelectedFilters}
-          showPriceMax
-          priceMax={priceMax}
-          onPriceMaxChange={setPriceMax}
-          priceMaxLabel="Max price per person"
-          priceMaxPlaceholder="e.g. 50"
-        />
+        <FilterSection summaryLabel="Filters">
+          <ListFilters
+            filterLabel="Type"
+            filterOptions={[
+              { label: "All", value: "all" },
+              { label: "Beach", value: "beach" },
+              { label: "Hiking", value: "hiking" },
+              { label: "Culture", value: "culture" },
+              { label: "Water", value: "water" },
+              { label: "Nature", value: "nature" },
+            ]}
+            selectedValues={selectedFilters}
+            onChange={setSelectedFilters}
+            showPriceMax
+            priceMax={priceMax}
+            onPriceMaxChange={setPriceMax}
+            priceMaxLabel="Max price per person"
+            priceMaxPlaceholder="e.g. 50"
+          />
+        </FilterSection>
         {/* List of attractions */}
         <Section className="cardGrid">
-          {filtered.map((item) => (
+          {filtered.map((item, index) => (
             <Card
               key={item.id}
               to={`/attractions/${item.id}`}
@@ -62,6 +65,7 @@ export default function Attractions() {
               description={item.description}
               image={item.image}
               price={item.price}
+              priority={index === 0}
             />
           ))}
         </Section>

@@ -3,6 +3,7 @@ import Section from "../components/Section";
 import Card from "../components/Card";
 import booking from "../data/booking";
 import { useState } from "react";
+import FilterSection from "../components/FilterSection";
 import ListFilters from "../components/Filter";
 
 function getPriceRange(item) {
@@ -47,23 +48,25 @@ export default function Booking() {
     <Container>
       <h1>Booking</h1>
       <div className="filter-page-layout">
-        <ListFilters
-          filterLabel="Category"
-          filterOptions={[
-            { label: "All", value: "all" },
-            { label: "Hotel", value: "hotel" },
-            { label: "Resort", value: "resort" },
-            { label: "Bed and Breakfast", value: "bed and breakfast" },
-            { label: "Hostel", value: "hostel" },
-          ]}
-          selectedValues={selectedFilters}
-          onChange={setSelectedFilters}
-          showPriceMax
-          priceMax={priceMax}
-          onPriceMaxChange={setPriceMax}
-        />
+        <FilterSection summaryLabel="Filters">
+          <ListFilters
+            filterLabel="Category"
+            filterOptions={[
+              { label: "All", value: "all" },
+              { label: "Hotel", value: "hotel" },
+              { label: "Resort", value: "resort" },
+              { label: "Bed and Breakfast", value: "bed and breakfast" },
+              { label: "Hostel", value: "hostel" },
+            ]}
+            selectedValues={selectedFilters}
+            onChange={setSelectedFilters}
+            showPriceMax
+            priceMax={priceMax}
+            onPriceMaxChange={setPriceMax}
+          />
+        </FilterSection>
         <Section title="Properties" className="cardGrid">
-          {filtered.map((item) => (
+          {filtered.map((item, index) => (
             <Card
               key={item.id}
               to={`/booking/${item.id}`}
@@ -71,6 +74,7 @@ export default function Booking() {
               description={item.description}
               image={item.image}
               price={getPriceRange(item)}
+              priority={index === 0}
             />
           ))}
         </Section>

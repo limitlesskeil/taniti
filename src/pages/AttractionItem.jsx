@@ -3,7 +3,6 @@ import Container from "../components/Container";
 import NotFoundMessage from "../components/NotFoundMessage";
 import attractions from "../data/attractions";
 import events from "../data/events";
-import Section from "../components/Section";
 import Card from "../components/Card";
 
 export default function AttractionItem() {
@@ -51,31 +50,41 @@ export default function AttractionItem() {
         {attractionItem.keywords?.join(", ")}
       </p>
       {relatedEvents.length > 0 && (
-        <Section title="Events at this attraction" className="event-grid">
-          {relatedEvents.map((event) => (
-            <Card
-              key={event.id}
-              to={`/events/${event.id}`}
-              title={event.title}
-              description={event.description}
-              image={event.image}
-            />
-          ))}
-        </Section>
+        <details className="collapsible-section collapsible-section--events">
+          <summary className="collapsible-section__header">
+            Events at this attraction ({relatedEvents.length})
+          </summary>
+          <div className="collapsible-section__content event-grid">
+            {relatedEvents.map((event) => (
+              <Card
+                key={event.id}
+                to={`/events/${event.id}`}
+                title={event.title}
+                description={event.description}
+                image={event.image}
+              />
+            ))}
+          </div>
+        </details>
       )}
       {relatedAttractions.length > 0 && (
-        <Section title="Other attractions nearby" className="attraction-grid">
-          {relatedAttractions.map((attraction) => (
-            <Card
-              key={attraction.id}
-              to={`/attractions/${attraction.id}`}
-              title={attraction.title}
-              description={attraction.description}
-              image={attraction.image}
-              price={attraction.price}
-            />
-          ))}
-        </Section>
+        <details className="collapsible-section collapsible-section--attractions">
+          <summary className="collapsible-section__header">
+            Other attractions nearby ({relatedAttractions.length})
+          </summary>
+          <div className="collapsible-section__content attraction-grid">
+            {relatedAttractions.map((attraction) => (
+              <Card
+                key={attraction.id}
+                to={`/attractions/${attraction.id}`}
+                title={attraction.title}
+                description={attraction.description}
+                image={attraction.image}
+                price={attraction.price}
+              />
+            ))}
+          </div>
+        </details>
       )}
     </Container>
   );

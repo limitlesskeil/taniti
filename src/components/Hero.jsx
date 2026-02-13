@@ -5,7 +5,7 @@ function Hero({ title, description, image }) {
         <div className="hero">
             <h1>{title}</h1>
             <p>{description}</p>
-            <img src={image} alt={title} />
+            <img src={image} alt="" fetchPriority="high" />
         </div>
     )
 }

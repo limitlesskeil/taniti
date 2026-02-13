@@ -35,6 +35,7 @@ export default function Filter({
             type="button"
             className={`filters__pill ${selectedValues.includes(opt.value) ? 'filters__pill--active' : ''}`}
             onClick={() => handlePillClick(opt.value)}
+            aria-pressed={selectedValues.includes(opt.value)}
           >
             {opt.label}
           </button>

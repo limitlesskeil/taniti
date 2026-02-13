@@ -6,11 +6,12 @@ import ListFilters from "../components/Filter";
 import { useState } from "react";
 
 export default function Events() {
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   const filtered = events.filter(
     (item) =>
-      "all" === selectedFilter || item.keywords.includes(selectedFilter),
+      selectedFilters.length === 0 ||
+      selectedFilters.some((filter) => item.keywords.includes(filter)),
   );
 
   return (
@@ -19,7 +20,7 @@ export default function Events() {
       <div className="filter-page-layout">
         {/* Filters */}
         <ListFilters
-          filterLabel="Filter by type"
+          filterLabel="Type"
           filterOptions={[
             { label: "All", value: "all" },
             { label: "Cultural", value: "cultural" },
@@ -27,8 +28,8 @@ export default function Events() {
             { label: "Water", value: "water" },
             { label: "Nature", value: "nature" },
           ]}
-          activeFilter={selectedFilter}
-          onFilterChange={setSelectedFilter}
+          selectedValues={selectedFilters}
+          onChange={setSelectedFilters}
         />
         {/* List of events */}
         <Section className="cardGrid">

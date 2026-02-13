@@ -1,12 +1,24 @@
 import { useParams } from "react-router-dom";
 import Container from "../components/Container";
+import NotFoundMessage from "../components/NotFoundMessage";
 import booking from "../data/booking";
 import Section from "../components/Section";
 import Card from "../components/Card";
 
 export default function BookingItem() {
   const { id } = useParams();
-  const bookingItem = booking.find((booking) => booking.id === parseInt(id));
+  const bookingItem = booking.find((b) => b.id === parseInt(id, 10));
+
+  if (!bookingItem) {
+    return (
+      <NotFoundMessage
+        message="Property not found."
+        backTo="/booking"
+        backLabel="Back to properties"
+      />
+    );
+  }
+
   return (
     <Container>
       <h1>{bookingItem.title}</h1>

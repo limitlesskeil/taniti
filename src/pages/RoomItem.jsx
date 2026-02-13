@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import Container from '../components/Container'
+import NotFoundMessage from '../components/NotFoundMessage'
 import booking from '../data/booking'
 
 export default function RoomItem() {
@@ -9,10 +10,11 @@ export default function RoomItem() {
 
   if (!property || !room) {
     return (
-      <Container>
-        <p>Room not found.</p>
-        <Link to="/booking">Back to properties</Link>
-      </Container>
+      <NotFoundMessage
+        message="Room not found."
+        backTo="/booking"
+        backLabel="Back to properties"
+      />
     )
   }
 

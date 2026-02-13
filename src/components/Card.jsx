@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Card({ title, description, image, price, to, priority }) {
+function Card({ title, description, image, price, guests, to, priority }) {
   const content = (
     <>
       {image && (
@@ -15,7 +15,13 @@ function Card({ title, description, image, price, to, priority }) {
       )}
       <div className="cardOverlay">
         <h3>{title}</h3>
-        {price && <p className="card__price">{price}</p>}
+        {(price || guests) && (
+          <p className="card__meta">
+            {price}
+            {price && guests && " · "}
+            {guests}
+          </p>
+        )}
         <p>{description}</p>
       </div>
     </>

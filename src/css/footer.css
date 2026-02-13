@@ -22,10 +22,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s;
+  transition: color var(--transition-fast);
 }
 
-@media (min-width: 640px) {
+@media (min-width: var(--breakpoint-sm)) {
   .footer__links {
     gap: var(--spacing-md) var(--spacing-xl);
   }

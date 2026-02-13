@@ -9,8 +9,9 @@ export default function Layout() {
   const mainRef = useRef(null)
   const { pathname } = useLocation()
 
-  // Focus management on route change (React Router accessibility guidance)
+  // Scroll to top and focus main on route change (React Router accessibility guidance)
   useEffect(() => {
+    window.scrollTo(0, 0)
     mainRef.current?.focus()
   }, [pathname])
 

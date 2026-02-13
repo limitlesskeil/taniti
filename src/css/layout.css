@@ -1,4 +1,10 @@
-/* Layout */
+/**
+ * Layout – header, main, skip link
+ * Uses tokens: --nav-height-mobile, --nav-height-desktop (scroll-margin-top)
+ *
+ * Home: header fixed, overlays hero. Other pages: header sticky, transparent.
+ */
+
 .layout {
   position: relative;
   display: flex;
@@ -11,13 +17,13 @@
   position: absolute;
   top: -100%;
   left: var(--spacing-md);
-  z-index: 1000;
+  z-index: var(--z-skip);
   padding: var(--spacing-md) var(--spacing-lg);
   background: var(--color-primary);
   color: white;
   font-weight: 600;
   border-radius: var(--radius-md);
-  transition: top 0.2s;
+  transition: top var(--transition-fast);
 }
 
 .skip-link:focus {
@@ -29,7 +35,7 @@
 .layout__header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: var(--z-dropdown);
   background: transparent;
   backdrop-filter: none;
   border-bottom: none;
@@ -40,7 +46,7 @@
   justify-content: flex-start;
 }
 
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-md)) {
   .layout__header {
     justify-content: center;
   }
@@ -71,16 +77,16 @@
   flex: 1;
   padding: var(--spacing-xl) calc(var(--spacing-md) + env(safe-area-inset-right)) calc(var(--spacing-xl) + env(safe-area-inset-bottom)) calc(var(--spacing-md) + env(safe-area-inset-left));
   /* Prevent content from being hidden under sticky nav when scrolled into view (focus/skip link) */
-  scroll-margin-top: 5rem;
+  scroll-margin-top: var(--nav-height-mobile);
 }
 
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-md)) {
   .layout__main {
-    scroll-margin-top: 5.5rem;
+    scroll-margin-top: var(--nav-height-desktop);
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: var(--breakpoint-sm)) {
   .layout__main {
     padding: var(--spacing-2xl) calc(var(--spacing-xl) + env(safe-area-inset-right)) calc(var(--spacing-2xl) + env(safe-area-inset-bottom)) calc(var(--spacing-xl) + env(safe-area-inset-left));
   }

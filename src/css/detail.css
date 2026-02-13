@@ -15,7 +15,7 @@
   padding: var(--spacing-lg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .section.room-grid .card--link:hover {
@@ -28,7 +28,7 @@
   flex: 1;
 }
 
-.section.room-grid .card__price {
+.section.room-grid .card__meta {
   font-weight: 600;
   color: var(--color-primary);
 }
@@ -108,7 +108,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  transition: background 0.2s;
+  transition: background var(--transition-fast);
 }
 
 .collapsible-section__header::-webkit-details-marker {
@@ -118,7 +118,7 @@
 .collapsible-section__header::before {
   content: '▶';
   font-size: 0.75em;
-  transition: transform 0.2s;
+  transition: transform var(--transition-fast);
 }
 
 .collapsible-section[open] .collapsible-section__header::before {

@@ -50,9 +50,39 @@
   --font-size-h2: clamp(1.25rem, 2.5vw, 1.5rem);
   --line-height-tight: 1.25;
   --line-height-relaxed: 1.65;
-  /* Layout */
+  /* Breakpoints – single source of truth for responsive layout
+     Use: @media (min-width: var(--breakpoint-sm)) { ... }
+     sm: mobile → tablet, md: tablet → desktop, lg: desktop+ */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --max-width: 1200px;
+  /* Touch targets (WCAG 2.5.5) */
+  --touch-target-min: 44px;
+
+  /* Navigation – pill overlay, heights for scroll-margin (nav.css, layout.css) */
+  --color-nav-pill: rgba(254, 253, 251, 0.95);
+  --color-nav-pill-desktop: rgba(250, 253, 251, 0.92);
+  --color-nav-pill-hover: rgba(254, 253, 251, 0.98);
+  --shadow-nav-overlay: 0 4px 24px rgba(0, 0, 0, 0.12);
+  --shadow-nav-toggle: 0 2px 12px rgba(0, 0, 0, 0.1);
+  --nav-height-mobile: 5rem;
+  --nav-height-desktop: 5.5rem;
+
+  /* Z-index stack – layer order to avoid stacking bugs
+     base: 0, dropdown: 100, header: 200, skip: 1000, modal: 9999 */
+  --z-dropdown: 100;
+  --z-header: 200;
+  --z-skip: 1000;
+  --z-modal: 9999;
+
+  /* Transitions – use for consistency, respects prefers-reduced-motion in base.css */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.4s;
+  --ease-default: ease;
+
+  /* Backdrop blur – for overlay glass effect */
+  --blur-sm: 8px;
+  --blur-md: 12px;
 }

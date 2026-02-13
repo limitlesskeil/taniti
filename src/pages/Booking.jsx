@@ -25,6 +25,17 @@ function getMinPrice(item) {
   return prices.length > 0 ? Math.min(...prices) : null;
 }
 
+function getGuestRange(item) {
+  const rooms = item.rooms ?? [];
+  const guests = rooms
+    .map((r) => r.maxGuests)
+    .filter((n) => typeof n === "number" && !isNaN(n));
+  if (guests.length === 0) return null;
+  const min = Math.min(...guests);
+  const max = Math.max(...guests);
+  return min === max ? `${min} guest${min === 1 ? "" : "s"}` : `${min}–${max} guests`;
+}
+
 export default function Booking() {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [priceMax, setPriceMax] = useState("");
@@ -74,6 +85,7 @@ export default function Booking() {
               description={item.description}
               image={item.image}
               price={getPriceRange(item)}
+              guests={getGuestRange(item)}
               priority={index === 0}
             />
           ))}

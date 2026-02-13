@@ -1,0 +1,63 @@
+/* Room item detail */
+.room-item__property {
+  color: var(--color-text-muted);
+  margin-top: 0;
+}
+
+.room-item__image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: var(--spacing-md) 0;
+}
+
+.room-item__price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Attraction item detail */
+.attraction-item__location {
+  color: var(--color-text-muted);
+  margin-top: 0;
+}
+
+.attraction-item__image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: var(--spacing-md) 0;
+}
+
+.attraction-item__price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.attraction-item__keywords {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Event item detail */
+.event-item__image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: var(--spacing-md) 0;
+}
+
+.event-item__meta {
+  color: var(--color-text-muted);
+  margin: var(--spacing-xs) 0;
+}
+
+.event-item__keywords {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}

@@ -1,6 +1,6 @@
-function Section({ title, children }) {
+function Section({ title, children, className }) {
     return (
-        <section className="section">
+        <section className={className ? `section ${className}` : 'section'}>
             <h2>{title}</h2>
             {children}
         </section>

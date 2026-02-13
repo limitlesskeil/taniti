@@ -1,11 +1,9 @@
-import { NavLink } from 'react-router-dom'
-
-function isInfoActive(_, location) {
-  const path = location.pathname
-  return path === '/about' || path === '/faq' || path === '/contact'
-}
+import { NavLink, Link, useLocation } from 'react-router-dom'
 
 export default function MainNav() {
+  const { pathname } = useLocation()
+  const isInfoActive = ['/about', '/faq', '/contact'].includes(pathname)
+
   return (
     <nav className="main-nav" aria-label="Main navigation">
       <NavLink to="/" end className="main-nav__link">
@@ -14,9 +12,12 @@ export default function MainNav() {
       <NavLink to="/booking" end={false} className="main-nav__link">
         Visit
       </NavLink>
-      <NavLink to="/about" isActive={isInfoActive} className="main-nav__link">
+      <Link
+        to="/about"
+        className={`main-nav__link ${isInfoActive ? 'active' : ''}`}
+      >
         Info
-      </NavLink>
+      </Link>
     </nav>
   )
 }

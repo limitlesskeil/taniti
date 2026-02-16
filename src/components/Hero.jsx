@@ -1,13 +1,11 @@
-
-
-function Hero({ title, description, image }) {
-    return (
-        <div className="hero">
-            <h1>{title}</h1>
-            <p>{description}</p>
-            <img src={image} alt={title} />
-        </div>
-    )
+function Hero({ title, description, image, className }) {
+  return (
+    <div className={`hero ${className ?? ""}`}>
+      <h1>{title ?? description ?? ""}</h1>
+      {description && <p>{description}</p>}
+      <img src={image} alt={title ?? description ?? ""} fetchPriority="high" />
+    </div>
+  );
 }
 
 export default Hero;

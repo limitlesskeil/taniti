@@ -1,0 +1,177 @@
+export default [
+  {
+    id: 1,
+    title: 'Taniti Festival of Lights',
+    image: 'https://images.pexels.com/photos/27894343/pexels-photo-27894343.jpeg?auto=compress&cs=tinysrgb&w=600',
+    date: 'March 15–17',
+    location: 'Taniti City',
+    description:
+      'Traditional island celebration with lantern parades, native dance, and food stalls along the waterfront. Kicks off at sunset each evening.',
+    keywords: ['cultural', 'family', 'festival'],
+  },
+  {
+    id: 2,
+    title: 'Yellow Leaf Bay Regatta',
+    image: 'https://images.unsplash.com/photo-1498623116890-37e912163d5d?w=600&q=80',
+    date: 'July 8',
+    location: 'Yellow Leaf Bay',
+    description:
+      'Annual sailing competition and waterfront celebration. Watch the races from the beach or join the post-race party.',
+    keywords: ['water', 'sports', 'outdoor'],
+    attractionId: 7,
+  },
+  {
+    id: 3,
+    title: 'Volcano Moon Festival',
+    image: 'https://images.unsplash.com/photo-1576790535255-09ae1ca64ed1?w=600&q=80',
+    date: 'August 22',
+    location: 'Volcano National Park',
+    description:
+      'Special evening viewing of the full moon over the volcano. Guided treks, storytelling, and traditional ceremonies.',
+    keywords: ['cultural', 'nature', 'night'],
+    attractionId: 2,
+  },
+  {
+    id: 4,
+    title: 'Merriton Landing Street Fair',
+    image: 'https://images.unsplash.com/photo-1556360853-b581cf3c8eb2?w=600&q=80',
+    date: 'Every Saturday',
+    location: 'Merriton Landing',
+    description:
+      'Weekly market with local artisans, food vendors, live music, and crafts. Rain or shine.',
+    keywords: ['cultural', 'family', 'recurring'],
+    attractionId: 11,
+  },
+  {
+    id: 5,
+    title: 'Rainforest Birding Festival',
+    image: 'https://images.unsplash.com/photo-1560951750-1e85780f946b?w=600&q=80',
+    date: 'September 12–14',
+    location: 'Rainforest Trails',
+    description:
+      "Guided bird-watching tours, photography workshops, and talks on Taniti's native species. Led by local naturalists.",
+    keywords: ['nature', 'adventure', 'family'],
+    attractionId: 9,
+  },
+  {
+    id: 6,
+    title: 'Taniti Heritage Week',
+    image: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80',
+    date: 'November 4–10',
+    location: 'Taniti City & Museum',
+    description:
+      'Museum exhibits, native dance performances, storytelling, and demonstrations of traditional crafts and cooking.',
+    keywords: ['cultural', 'family', 'indoor'],
+    attractionId: 6,
+  },
+  {
+    id: 7,
+    title: 'Coconut Harvest Festival',
+    image: 'https://images.unsplash.com/photo-1620752420341-4cd7642568dd?w=600&q=80',
+    date: 'October 1',
+    location: 'Yellow Leaf Bay',
+    description:
+      'Celebrate the harvest with coconut-themed food, drinks, games, and live music. Includes the famous coconut-climbing competition.',
+    keywords: ['cultural', 'food', 'family'],
+    attractionId: 1,
+  },
+  {
+    id: 8,
+    title: 'Cruise Ship Welcome Night',
+    image: 'https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=600&q=80',
+    date: 'Weekly (cruise arrival day)',
+    location: 'Yellow Leaf Bay Port',
+    description:
+      'When the cruise ship docks, join the waterfront market and evening festivities. Local vendors, entertainment, and island crafts.',
+    keywords: ['cultural', 'recurring', 'night'],
+    attractionId: 1,
+  },
+  {
+    id: 9,
+    title: 'Sunset Sail Social',
+    image: 'https://images.unsplash.com/photo-1627877081827-406327258622?w=600&q=80',
+    date: 'Every Friday',
+    location: 'Yellow Leaf Bay Marina',
+    description:
+      'Two-hour sunset sail with live acoustic music, light snacks, and drinks. A relaxed way to end the week.',
+    keywords: ['water', 'recurring', 'night'],
+    attractionId: 7,
+  },
+  {
+    id: 10,
+    title: 'Beach Bonfire & Stargazing',
+    image: 'https://images.unsplash.com/photo-1663247168201-1d6ea2d448fc?w=600&q=80',
+    date: 'Every Wednesday',
+    location: 'Yellow Leaf Bay Beaches',
+    description:
+      "Community bonfire on the beach with s'mores, storytelling, and stargazing. Family-friendly and free.",
+    keywords: ['family', 'recurring', 'night', 'free'],
+    attractionId: 1,
+  },
+  {
+    id: 11,
+    title: 'Taniti Island Volleyball Championship',
+    image: 'https://images.unsplash.com/photo-1634501087922-c01c76ed66d6?w=600&q=80',
+    date: 'June 21',
+    location: 'Yellow Leaf Bay Beaches',
+    description:
+      'Annual beach volleyball championship with teams from across Taniti and neighboring islands. Full day of competition on the sand, food vendors, and live entertainment. Family-friendly atmosphere.',
+    keywords: ['sports', 'beach', 'family', 'outdoor'],
+    attractionId: 1,
+  },
+  {
+    id: 12,
+    title: 'Snorkeling Under the Stars',
+    image: 'https://images.pexels.com/photos/2404370/pexels-photo-2404370.jpeg?auto=compress&cs=tinysrgb&w=600',
+    date: 'Full moon nights (monthly)',
+    location: 'Merriton Landing',
+    description:
+      'Special night snorkeling event when the water is clearest. Guided groups explore the reefs with glow markers. Gear provided. Book in advance.',
+    keywords: ['water', 'snorkeling', 'night', 'recurring'],
+    attractionId: 5,
+  },
+  {
+    id: 13,
+    title: 'Snorkel & Discover Day',
+    image: 'https://images.pexels.com/photos/2744596/pexels-photo-2744596.jpeg?auto=compress&cs=tinysrgb&w=600',
+    date: 'August 15',
+    location: 'Merriton Landing',
+    description:
+      'Family-friendly snorkeling event with marine life talks, reef tours, and beginner clinics. Perfect for first-time snorkelers. Includes gear and instruction.',
+    keywords: ['water', 'snorkeling', 'family'],
+    attractionId: 5,
+  },
+  {
+    id: 14,
+    title: 'Volcano Sunrise Trek',
+    image: 'https://images.unsplash.com/photo-1693643449954-dadf36202f86?w=600&q=80',
+    date: 'First Sunday of each month',
+    location: 'Volcano National Park',
+    description:
+      'Early morning guided hike to watch the sunrise from the volcano rim. Hot cocoa and light breakfast at the summit. Limited spots.',
+    keywords: ['hiking', 'nature', 'volcano', 'recurring'],
+    attractionId: 2,
+  },
+  {
+    id: 15,
+    title: 'Zip-Line Challenge Weekend',
+    image: 'https://images.unsplash.com/photo-1575780684471-ed79a358de9a?w=600&q=80',
+    date: 'July 20–21',
+    location: 'Rainforest Canopy Zip-Line',
+    description:
+      'Two-day event with timed runs, beginner sessions, and a sunset zip under the canopy. Prizes for fastest times and best photos.',
+    keywords: ['adventure', 'rainforest', 'thrilling'],
+    attractionId: 3,
+  },
+  {
+    id: 16,
+    title: 'Taniti Fishing Derby',
+    image: 'https://images.unsplash.com/photo-1656155175006-e2ee62a270c4?w=600&q=80',
+    date: 'September 7',
+    location: 'Yellow Leaf Bay Marina',
+    description:
+      'Annual fishing competition with categories for biggest catch and most species. Charter boats available. Weigh-in and awards at the marina.',
+    keywords: ['water', 'fishing', 'sports', 'outdoor'],
+    attractionId: 4,
+  },
+]

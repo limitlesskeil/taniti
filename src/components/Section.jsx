@@ -1,10 +1,10 @@
-function Section({ title, children }) {
-    return (
-        <section className="section">
-            <h2>{title}</h2>
-            {children}
-        </section>
-    )
+function Section({ title, children, className }) {
+  return (
+    <section className={className ? `section ${className}` : 'section'}>
+      {title && <h2>{title}</h2>}
+      {children}
+    </section>
+  )
 }
 
 export default Section;

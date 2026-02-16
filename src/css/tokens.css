@@ -1,0 +1,91 @@
+/* Taniti Island – vacation design tokens (WCAG 2.1 AA compliant) */
+:root {
+  /* Primary – teal (4.5:1+ on light backgrounds) */
+  --color-primary: #0b7a6b;
+  --color-primary-hover: #095e52;
+  --color-primary-light: #ccfbf1;
+  --color-primary-subtle: #f0fdfa;
+  /* Accent – amber (4.5:1+ on light) */
+  --color-accent: #b45309;
+  --color-accent-soft: #fef3c7;
+  /* Text – dark enough for 4.5:1 on all backgrounds */
+  --color-text: #1c1917;
+  --color-text-muted: #57534e;
+  /* Surfaces – warm, reduced white */
+  --color-bg: #f5f3ee;
+  --color-bg-elevated: #fefdfb;
+  --color-bg-alt: #ebe9e4;
+  --color-bg-warm: #faf8f5;
+  --color-bg-header: #faf9f7;
+  --color-bg-footer: #e8e6e1;
+  /* Borders */
+  --color-border: #e7e5e4;
+  --color-border-soft: #f0eeeb;
+  /* On dark (hero, dark sections) – for white/light text */
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: rgba(255, 255, 255, 0.9);
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(28, 25, 23, 0.08), 0 2px 4px -2px rgba(28, 25, 23, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(28, 25, 23, 0.08), 0 4px 6px -4px rgba(28, 25, 23, 0.06);
+  --shadow-card-hover: 0 20px 25px -5px rgba(28, 25, 23, 0.1), 0 8px 10px -6px rgba(28, 25, 23, 0.06);
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  /* Typography */
+  --font-sans: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-size-base: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  --font-size-h1: clamp(1.875rem, 4.5vw, 2.75rem);
+  --font-size-h2: clamp(1.25rem, 2.5vw, 1.5rem);
+  --line-height-tight: 1.25;
+  --line-height-relaxed: 1.65;
+  /* Breakpoints – reference values for responsive layout
+     Use literal px in media queries (var() not supported): 640px, 768px, 1024px
+     sm: mobile → tablet, md: tablet → desktop, lg: desktop+ */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --max-width: 1200px;
+  /* Touch targets (WCAG 2.5.5) */
+  --touch-target-min: 44px;
+
+  /* Navigation – pill overlay, heights for scroll-margin (nav.css, layout.css) */
+  --color-nav-pill: rgba(254, 253, 251, 0.95);
+  --color-nav-pill-desktop: rgba(250, 253, 251, 0.92);
+  --color-nav-pill-hover: rgba(254, 253, 251, 0.98);
+  --shadow-nav-overlay: 0 4px 24px rgba(0, 0, 0, 0.12);
+  --shadow-nav-toggle: 0 2px 12px rgba(0, 0, 0, 0.1);
+  --nav-height-mobile: 5rem;
+  --nav-height-desktop: 5.5rem;
+
+  /* Z-index stack – layer order to avoid stacking bugs
+     base: 0, dropdown: 100, header: 200, skip: 1000, modal: 9999 */
+  --z-dropdown: 100;
+  --z-header: 200;
+  --z-skip: 1000;
+  --z-modal: 9999;
+
+  /* Transitions – use for consistency, respects prefers-reduced-motion in base.css */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.4s;
+  --ease-default: ease;
+
+  /* Backdrop blur – for overlay glass effect */
+  --blur-sm: 8px;
+  --blur-md: 12px;
+
+  /* Dropdown min-width (nav.css) */
+  --min-width-dropdown: 180px;
+}

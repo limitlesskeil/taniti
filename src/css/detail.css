@@ -1,0 +1,294 @@
+/* Room grid – cards without images */
+.section.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.section.room-grid > h2 {
+  grid-column: 1 / -1;
+}
+
+.section.room-grid .card--link {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.section.room-grid .card--link:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.section.room-grid .cardOverlay {
+  flex: 1;
+}
+
+.section.room-grid .card__meta {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Room item detail */
+.room-item__property {
+  color: var(--color-text-muted);
+  margin-top: 0;
+}
+
+/* Shared detail page image styling */
+.room-item__image,
+.attraction-item__image,
+.event-item__image {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-md) 0;
+  box-shadow: var(--shadow-md);
+}
+
+.room-item__price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Attraction item detail */
+.attraction-item__location {
+  color: var(--color-text-muted);
+  margin-top: 0;
+}
+
+
+.attraction-item__price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.attraction-item__keywords {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Event item detail */
+
+.event-item__meta {
+  color: var(--color-text-muted);
+  margin: var(--spacing-xs) 0;
+}
+
+.event-item__keywords {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Collapsible related events section */
+.collapsible-section {
+  margin-bottom: var(--spacing-2xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
+
+.collapsible-section__header {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  list-style: none;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: background var(--transition-fast);
+}
+
+.collapsible-section__header::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section__header::before {
+  content: '▶';
+  font-size: 0.75em;
+  transition: transform var(--transition-fast);
+}
+
+.collapsible-section[open] .collapsible-section__header::before {
+  transform: rotate(90deg);
+}
+
+.collapsible-section__header:hover {
+  background: var(--color-bg-alt);
+}
+
+.collapsible-section__content {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Event grid – card layout with constrained images */
+.collapsible-section__content.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+}
+
+.collapsible-section__content.event-grid .cardImage {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.collapsible-section__content.event-grid .cardImage img,
+.collapsible-section__content.attraction-grid .cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Attraction grid – same layout as event grid */
+.collapsible-section__content.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+}
+
+.collapsible-section__content.attraction-grid .cardImage {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+/* FAQ page – sections with expandable Q&A */
+.faq-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.faq-section:last-child {
+  margin-bottom: 0;
+}
+
+.faq-section h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary-light);
+  display: inline-block;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item__question {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: var(--spacing-md) var(--spacing-lg);
+  cursor: pointer;
+  list-style: none;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: background var(--transition-fast);
+}
+
+.faq-item__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__question::before {
+  content: '▶';
+  font-size: 0.75em;
+  color: var(--color-primary);
+  transition: transform var(--transition-fast);
+}
+
+.faq-item[open] .faq-item__question::before {
+  transform: rotate(90deg);
+}
+
+.faq-item__question:hover {
+  background: var(--color-bg-alt);
+}
+
+.faq-item__answer {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  border-top: 1px solid var(--color-border-soft);
+}
+
+.faq-item__answer p {
+  margin: var(--spacing-md) 0 0;
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+/* About page – links moved out of paragraphs for cleaner layout */
+.about-page__link {
+  text-underline-offset: 0.2em;
+}
+
+.about-page__link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Link groups – compact flex wrap, accessible touch targets */
+.about-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+}
+
+.about-page__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.about-page__links a:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary-hover);
+  text-decoration: none;
+}
+
+.about-page__links a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Contact page */
+.contact-intro {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-muted);
+}
